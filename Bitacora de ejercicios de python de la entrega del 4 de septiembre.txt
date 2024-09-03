@@ -1,0 +1,43 @@
+Decidí crear este documento para que sirviera de alguna manera como bitácora del como realice cada uno de los ejercicios quería crear comentarios en el mismo código 
+pero al ver que era tanto texto iba saturar mucho el código principal entonces preferí realizarlo en un documento aparte
+
+
+1 Ejercicio: Bueno este ejercicio tuve muy en cuenta los ejercicios del examen de la vez anterior que fui a la central Solo que para este caso mi mayor incógnita era Cómo saber la suma del resultado anterior con el siguiente elemento y así sucesivamente Pensé en primera en el código Fibonacci pero no sé acoplaba a lo que necesitaba por lo que investigando en internet y viejos archivos decidí hacer uso del método Append el cual permite agregar un elemento al final de la lista
+
+-Mediante iba investigando para ver cómo podía simplificar algo más el código me encontré con el operador Walrus o morsa (:= ) el cual su función es asignar un valor a una variable y que se evalúe como expresión para mí es un operador algo nuevo o que no recuerdo haber visto antes y que permitió simplificar de manera mucho más fácil el ejercicio
+
+
+
+
+
+
+2 Ejercicio: Para este ejercicio tenía más o menos una idea ya que revisando antiguos ejercicios que tenía de Python o notas de viejos cursos etc. Me encontré con el método len el cual devuelve la longitud de un objeto después utilicé el pop el cual elimina el elemento según el índice que se le pasa Por ende el cero sería el primer valor y el -1 el último y también cree la función salida la cual no se requería en el problema pero es como un valor agregado para que de esta forma se pueda ver algo más organizado la lista original y la lista que se modificó a la hora de ejecutar el código así borrando los elementos pedidos Igualmente con la propia función elimina muestra la lista con los elementos que fueron eliminados 
+
+-Y para la función media tuve muy en cuenta el ejercicio de voltear las letras o la frase que hice en la central y después de algunos intentos intenté hacerlo de esa manera más simple la cual dio los resultados esperados
+
+
+
+
+3 Ejercicio: Para la función ordena la realicé de tres maneras diferentes encontré en un archivo viejo correspondiente a la vez que estaba aprendiendo sobre las listas encontré varios métodos y funciones y entre ellos estaba Sorted  y de allí en adelante solo fue irlo acomodando hasta conseguir el resultado esperado cuando llegue ese punto Pensé que podría haber una forma en el que el código se viera menos feo o más legible por lo que decidí hacer que la pequeña pieza Por así decirlo que hacía que el código realizara lo que el ejercicio pedía después de declarar la función y después hacer los condicionales para que esto Solo imprimiera si la lista era verdadera o no de forma que tenía dos códigos algo parecido pero uno más ordenado que el otro después entró una duda que si se podía simplificar de tal manera como la función media Así que borré todo el código de los condicionales y Solo dejé el lista==sorted (lista) y a la hora de ejecutarlo también realizaba esperado por lo que las tres funciones ordena son funcionales y solo fueron muestras de cómo intenté ir mejorando el código de diferentes maneras hasta hacerlo más compacto y legible Por así decirlo
+
+
+
+
+
+4 Ejercicio: Para el ejercicio número 4 tomé bases de lo que hice con la función elimina del ejercicio número 2 y decidí volver a usar el Len el cual me sirve para devolver la longitud de un objeto Pero de igual manera necesitaba saber el Cómo devolver si la lista estaba ordenada o no por lo que buscando por internet Me encontré con el Set el cual su Estructura de datos contiene una colección desordenada de elementos Únicos de forma más sencilla esto significa que no puede haber elementos duplicados o sea que básicamente lista va a ser igual a una lista sin números duplicados Entonces si esto es así va a ser falso pero si no es así y tiene números duplicados va a ser verdadero cómo lo pide el ejercicio
+
+
+-Para la función que pedía una lista de números aleatorios y después usar la función duplica para ver sí había números duplicados o no buscando Me encontré con una página muy útil (https://ellibrodepython.com/)la cual me sirvió para tener una base de Cómo realizar el ejercicio y así de usar el Random Choices el cual es una función que se utiliza para seleccionar uno o más elementos aleatoriamente de una secuencia y haciendo uso del parámetro k le digo Cuántos elementos debe seleccionar también decide usar la función Range la cual Crea una serie de números consecutivos o sea que lo que primero que hice fue crear esta serie de números del 1 al 100 y después le digo con k Cuántos elementos debe seleccionar en este caso 23 así dando solución al cuarto ejercicio algo que también estaba probando mientras hacía pruebas es que si cuando declaramos la función le colocamos un parámetro lista y a la hora de ejecutarlo en vez de lista igual números random le colocamos lista igual y una lista de 23 números va a funcionar 
+
+import random
+def numeros_random(lista):
+    lista_random = random.choices(range(1,100),k=23)
+    return lista_random
+    
+    
+lista = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
+resultado = duplica(lista)
+print(lista)
+print(resultado)
+
+-sin embargo no es óptimo y rompería la lógica del por qué tener el Range en primer lugar
